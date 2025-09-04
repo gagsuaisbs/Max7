@@ -61,7 +61,7 @@ time_bio = ["off"]
 
 async def join_channel():
     try:
-        await sython(JoinChannelRequest("https://t.me/+kMg0Yo_HPA0wOTZi"))
+        await sython(JoinChannelRequest("@Q22QQQ2"))
     except BaseException:
         pass
 
@@ -79,12 +79,12 @@ async def _(event):
     end = datetime.datetime.now()
     ms = (end - start).microseconds / 1000
     await event.edit(f'''
-**☆ 𝑊𝐸𝐿𝐶𝑂𝑀𝐸 𝑇𝑂 𝑆𝑂𝐔𝑅𝐶𝐸 AndY 🇮🇶
+**☆ 𝑊𝐸𝐿𝐶𝑂𝑀𝐸 𝑇𝑂 𝑆𝑂𝐔𝑅𝐶𝐸 𝑀𝐴𝑋 🇮🇶
 ☆ VERSION : 2.8
 ☆ PING : `{ms}`
 ☆ DATE : `{m9zpi}`
 ☆ ID : `{event.sender_id}`
-☆ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗠𝗔𝗫  : @AndY985 = @iz0000**
+☆ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗠𝗔𝗫  : @Max985 = @FCF303**
 
 -قـم بأرسال `.الاوامر`
 ''')
@@ -147,7 +147,7 @@ async def _(event):
             await asyncio.sleep(5)
 
             list = await sython(GetHistoryRequest(peer=channel_entity, limit=1,
-                                                   offset_date=None, offset_id=0, AndY_id=0, min_id=0, add_offset=0, hash=0))
+                                                   offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
             msgs = list.messages[0]
             if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
                 await sython.send_message(event.chat_id, f"لايوجد قنوات  في البوت | SY")
@@ -192,7 +192,7 @@ async def _(event):
             await asyncio.sleep(5)
 
             list = await sython(GetHistoryRequest(peer=channel_entity, limit=1,
-                                                   offset_date=None, offset_id=0, AndY_id=0, min_id=0, add_offset=0, hash=0))
+                                                   offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
             msgs = list.messages[0]
             if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
                 await sython.send_message(event.chat_id, f"لايوجد قنوات  في البوت | SY")
@@ -223,7 +223,7 @@ logging.basicConfig(
 
 async def join_channel():
     try:
-        await sython(JoinChannelRequest("https://t.me/+kMg0Yo_HPA0wOTZi"))
+        await sython(JoinChannelRequest("@SAYTHONH"))
     except BaseException:
         pass
  
@@ -259,7 +259,7 @@ def calc(num1, num2, fun):
 @sython.on(events.NewMessage(outgoing=True, pattern=".احسب (.*)"))
 async def _(event):
     try:
-        msg = ("".join(event.text.split(AndYsplit=1)[1:])).split(" ", 2)
+        msg = ("".join(event.text.split(maxsplit=1)[1:])).split(" ", 2)
         num1 = int(msg[0])
         num2 = int(msg[2])
         fun = str(msg[1])
@@ -332,7 +332,7 @@ async def gucast(event):
 @sython.on(events.NewMessage(outgoing=True, pattern=".تكرار (.*)"))
 async def spammer(event):
     sandy = await event.get_reply_message()
-    cat = ("".join(event.text.split(AndYsplit=1)[1:])).split(" ", 1)
+    cat = ("".join(event.text.split(maxsplit=1)[1:])).split(" ", 1)
     counter = int(cat[0])
     if counter > 50:
         sleeptimet = 0.5
@@ -377,7 +377,7 @@ async def spam_function(event, sandy, cat, sleeptimem, sleeptimet, DelaySpam=Fal
 @sython.on(events.NewMessage(outgoing=True, pattern=".مؤقت (.*)"))
 async def spammer(event):
     reply = await event.get_reply_message()
-    input_str = "".join(event.text.split(AndYsplit=1)[1:]).split(" ", 2)
+    input_str = "".join(event.text.split(maxsplit=1)[1:]).split(" ", 2)
     sleeptimet = sleeptimem = float(input_str[0])
     cat = input_str[1:]
     await event.delete()
@@ -387,14 +387,14 @@ async def spammer(event):
     
 @sython.on(events.NewMessage(outgoing=True, pattern=".سورس"))
 async def _(event):
-      await event.reply("""السـورس يعمـل | AndY
+      await event.reply("""السـورس يعمـل | MAX
 ╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍
 
-- المطور : اندرو | AndY
+- المطور : شيخ | Sheikh
 
 - سورس بسيط يحتوي على الاوامر المهمة التي تحتاجها
 
-قناة السورس : https://t.me/AndY985 
+قناة السورس : https://t.me/MAX985 
 ╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍"""
 )
 
@@ -523,5 +523,5 @@ async def _(event):
 
 
 
-print("- AndY Userbot Running ..🔥")
+print("- sython Userbot Running ..")
 sython.run_until_disconnected()

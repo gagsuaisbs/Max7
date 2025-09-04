@@ -42,7 +42,7 @@ def check_user(username):
         return "Unavailable"
 
 def gen_user(choice):
-     if choice == "1":
+    if choice == "1":
         c = d = random.choices(a)
         d = random.choices(e)
         f = [c[0], d[0], c[0], c[0], c[0], d[0]]
@@ -193,6 +193,7 @@ def gen_user(choice):
             d = random.choices(e)
             f = [c[0], d[0], c[0], c[0], d[0]]
             random.shuffle(f)
+            username = ''.join(f)
         else:
             pass
     return username
@@ -256,21 +257,25 @@ async def _(event):
                     await event.client.send_message(event.chat_id, f'''
 تم الصيد (@{username})
 ꩜ 𝙼𝙰𝚇 ↬  {trys}
-lD: @none
-lD : @none
+lD: @P_i_0 = @FCF300
+lD : @Max985 
     ''')
-                    await event.client.send_message("https://t.me/+kMg0Yo_HPA0wOTZi", f''' ⌲ تم الصيد (@{username})
+                    await event.client.send_message("@isAndreew", f''' ⌲ تم الصيد (@{username})
 ꩜ 𝙼𝙰𝚇 ↬  {trys}
-lD: @isAndreew
-الصيد : @Q22QQQ2 = @isAndreew ''')
+lD: @P_i_0 = @P8_PP 
+الصيد : @FCF300 = @MAX985 ''')
                     break
                 except telethon.errors.rpcerrorlist.UsernameInvalidError:
                     with open("banned.txt", "a") as f:
                         f.write(f"\n{username}")
                 except Exception as eee:
-     pass
+                    await sython.send_message(event.chat_id, f'''خطأ مع {username}
+    الخطأ :
+    {str(eee)}''')
                     if "A wait of" in str(eee):
                         break
+                    else:
+                        await sython.send_message(event.chat.id, " اجاك متاح !")
             else:
                 pass
             trys += 1
@@ -316,7 +321,7 @@ async def _(event):
                         await event.client.send_message(event.chat_id, f'''
 تم الصيد (@{username})
 ꩜ 𝙼𝙰𝚇 ↬  {trys}
-lD: @iz0000= @Q22QQQ2
+lD: @P_i_0= @FCF300
     ''')
                         break
                     except telethon.errors.rpcerrorlist.UsernameInvalidError:
@@ -349,7 +354,7 @@ lD: @iz0000= @Q22QQQ2
                 await event.client.send_message(event.chat_id, f'''
 تم الصيد (@{username})
 ꩜ 𝙼𝙰𝚇 ↬  {trys}
-lD: @iz0000= @Q22QQQ2
+lD: @P_i_0= @FCF300
     ''')
             except telethon.errors.rpcerrorlist.UsernameInvalidError:
                 await event.client.send_message(event.chat_id, f"مبند `{username}` ❌❌")
